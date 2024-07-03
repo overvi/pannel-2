@@ -33,13 +33,9 @@
 }
 
 @layer utilities {
-  .datepicker .ant-picker-input > input::placeholder {
-    @apply font-yekan dark:text-white;
-  }
-
   .ant-select .ant-select-selector {
     border-radius: 100vw;
-    @apply rounded-full dark:bg-gray-900 dark:border-gray-800 dark:text-white;
+    @apply rounded-full;
   }
 
   .seg .ant-segmented-item-selected {
@@ -47,10 +43,18 @@
   }
 
   .seg .ant-segmented-item {
-    border-radius: 100vw;
+    @apply rounded-full;
   }
 
   .seg .ant-segmented-thumb {
     border-radius: 100vw;
   }
+}
+
+.ant-popover-inner {
+  border-radius: 1.4rem !important;
+}
+
+.ant-popover-arrow {
+  left: 17px !important;
 }

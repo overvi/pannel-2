@@ -13,7 +13,7 @@ import ReactApexChart from "react-apexcharts";
 import empty from "../assets/empty-wallet.svg";
 import hotel from "../assets/hotel.png";
 import logo from "../assets/logo-l.png";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/en/NavBar";
 import Sidebar from "../components/Sidebar";
 import { useTheme } from "../components/ToggleColorMode";
 
@@ -54,7 +54,7 @@ const HomeEn = () => {
     <ConfigProvider theme={customTheme}>
       <Navbar />
 
-      <div dir="rtl" className="flex gap-9">
+      <div dir="ltr" className="flex gap-9">
         <Sidebar />
         <div className="h-fit">
           <div className="flex dark:text-white gap-2">
@@ -80,17 +80,17 @@ const HomeEn = () => {
               />
             </svg>
 
-            <p>پیشخان</p>
+            <p>Dashboard</p>
           </div>
-          <div className="grid grid-cols-3 ml-9 mt-4 gap-9">
+          <div className="grid grid-cols-3 me-9 mt-4 gap-9">
             <div className=" col-span-2">
               <div className="bg-white dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl p-5">
                 <div className="flex justify-between items-center">
-                  <h1 className="font-bold text-xl">انتخاب هتل</h1>
+                  <h1 className="font-bold text-xl"> Select Hotel</h1>
                   <div className="*:dark:text-white">
                     <div className="flex items-center gap-1">
                       <img src={empty} alt="" />
-                      <p className="text-xs ">اعتبار فعلی</p>
+                      <p className="text-xs ">Amount </p>
                     </div>
                     <div className="font-semibold  text-xl dark:text-white">
                       USD <span className="text-orange-400">1200.3</span>
@@ -100,12 +100,12 @@ const HomeEn = () => {
                 <form className="space-y-5">
                   <div className="w-full mt-3  ">
                     <label className="block mb-2" htmlFor="">
-                      نام شهر یا هتل
+                      City or Hotel Name
                     </label>
                     <Input
                       className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                       type="text"
-                      placeholder="نام شهر یا هتل را وارد کنید..."
+                      placeholder="Select Hotel or City Name"
                     />
                   </div>
                   <div>
@@ -116,7 +116,7 @@ const HomeEn = () => {
                     <div className="flex gap-3 items-center">
                       <div>
                         <label className="block" htmlFor="my-select">
-                          بزرگسال
+                          Adult
                         </label>
                         <Select
                           defaultValue="1"
@@ -132,7 +132,7 @@ const HomeEn = () => {
                       </div>
                       <div>
                         <label htmlFor="my-select" className="block ">
-                          کودک
+                          Child
                         </label>
                         <Select
                           className="ant-select"
@@ -169,7 +169,7 @@ const HomeEn = () => {
                               fill="white"
                             />
                           </svg>
-                          <p>سن</p>
+                          <p>Age</p>
                         </button>
                         <Modal
                           onOk={handleOk}
@@ -183,15 +183,13 @@ const HomeEn = () => {
                             hidden: true,
                           }}
                         >
-                          <div dir="rtl" className="mt-9 font-yekan ">
-                            <h1 className="font-bold text-xl">سن کودکان</h1>
-                            <p>
-                              با توجه به تعدا د کودکان سن هرکدام را وارد کنید
-                            </p>
+                          <div dir="ltr" className="mt-9 font-yekan ">
+                            <h1 className="font-bold text-xl">Childs age </h1>
+                            <p>Select Children Ages</p>
                             <div className="flex items-center gap-4 mt-4">
                               <div>
                                 <label htmlFor="my-select" className="block ">
-                                  سن
+                                  Age
                                 </label>
                                 <Select
                                   className="ant-select"
@@ -207,7 +205,7 @@ const HomeEn = () => {
                               </div>
                               <div>
                                 <label htmlFor="my-select" className="block ">
-                                  سن
+                                  Age
                                 </label>
                                 <Select
                                   className="ant-select"
@@ -223,7 +221,7 @@ const HomeEn = () => {
                               </div>
                               <div>
                                 <label htmlFor="my-select" className="block ">
-                                  سن
+                                  Age
                                 </label>
                                 <Select
                                   className="ant-select"
@@ -239,7 +237,7 @@ const HomeEn = () => {
                               </div>
                               <div>
                                 <label htmlFor="my-select" className="block ">
-                                  سن
+                                  Age
                                 </label>
                                 <Select
                                   className="ant-select"
@@ -276,14 +274,16 @@ const HomeEn = () => {
                           fill="white"
                         />
                       </svg>
-                      <p>جستجو</p>
+                      <p>Search</p>
                     </button>
                   </div>
                 </form>
               </div>
               <div className="bg-white dark:bg-gray-900 dark:text-white mt-3 rounded-3xl p-5">
                 <div className="bg-white dark:bg-gray-900 dark:text-white mt-3  flex justify-between items-center">
-                  <h1 className="font-bold text-xl">تعداد رزرو موفق</h1>
+                  <h1 className="font-bold text-xl">
+                    Successful Reservations{" "}
+                  </h1>
                   <Demo />
                 </div>
                 <AreaChart />
@@ -298,8 +298,8 @@ const HomeEn = () => {
                   <img width="116" src={logo} alt="" />
                 </div>
                 <p className="mt-10">
-                  "همکاری با ما،
-                  <br /> تضمین بهترین اقامت برای مشتریان شما"
+                  "Cooporate With Us"
+                  <br /> Best Stay For Your Customers "
                 </p>
               </div>
             </div>
@@ -316,17 +316,17 @@ const DatePickers = () => {
   return (
     <div className="mt-3 flex items-center  gap-3 justify-between">
       <div className="basis-full">
-        <h2 className="mb-2">تاریخ ورود</h2>
+        <h2 className="mb-2">Enter Date </h2>
         <DatePicker
           className="rounded-full font-yekan w-full py-[.4rem]"
-          placeholder="تاریخ ورود"
+          placeholder="Enter Date "
         />
       </div>
       <div className="basis-full">
-        <h2 className="mb-2">تاریخ ورود</h2>
+        <h2 className="mb-2">Exit Date </h2>
         <DatePicker
           className="rounded-full font-yekan w-full py-[.4rem]  "
-          placeholder="تاریخ خروج"
+          placeholder="Exit Date "
         />
       </div>
     </div>
@@ -338,8 +338,8 @@ const Demo: React.FC = () => (
     dir="ltr"
     className="font-yekan seg rounded-full dark:bg-gray-900 dark:border dark:border-gray-700"
     options={[
-      { label: "ماهیانه", value: "List" },
-      { label: "هفتگی", value: "Kanban" },
+      { label: "monthly", value: "List" },
+      { label: "weekly", value: "Kanban" },
     ]}
   />
 );
