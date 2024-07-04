@@ -3,6 +3,7 @@ import hotels from "../assets/building-3.svg";
 import cloud from "../assets/cloud-connection.svg";
 import circle from "../assets/dollar-circle.svg";
 import grid from "../assets/grid-6.svg";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   const { i18n } = useTranslation();
@@ -24,9 +25,11 @@ const Sidebar = () => {
         <div>
           <img src={cloud} alt="" />
         </div>
-        <div>
-          <img src={circle} alt="" />
-        </div>
+        <Link to={"/messages"}>
+          <div>
+            <img src={circle} alt="" />
+          </div>
+        </Link>
       </div>
     </div>
   );
