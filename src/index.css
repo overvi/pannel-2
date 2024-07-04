@@ -49,6 +49,19 @@
   .seg .ant-segmented-thumb {
     border-radius: 100vw;
   }
+
+  td,
+  th {
+    @apply font-yekan;
+  }
+
+  .message-table .ant-table-cell {
+    @apply !font-bold;
+  }
+
+  .radio .ant-radio-checked .ant-radio-inner {
+    @apply bg-orange-500 border-orange-500;
+  }
 }
 
 .ant-popover-inner {
