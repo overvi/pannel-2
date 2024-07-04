@@ -13,7 +13,7 @@ const Messages = () => {
 
   const [selectedRowKey, setSelectedRowKey] = useState(null);
 
-  const onChange = (e: any, record: any) => {
+  const onChange = (_e: any, record: any) => {
     setSelectedRowKey(record.key);
   };
 
