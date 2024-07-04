@@ -73,7 +73,7 @@ const Navbar = () => {
               placeholder={t("reservationSearch")}
               className={`w-full h-full ${
                 en && "pl-3"
-              } dark:bg-gray-900 pr-3  absolute z-[1] top-0 shadow-none outline-none border-none`}
+              } dark:bg-gray-900 dark:text-white pr-3  absolute z-[1] top-0 shadow-none outline-none border-none`}
             />
             <div className="rounded-full z-10 flex h-[46px] w-[46px] relative  bg-orange-400">
               <img className="m-auto" src={search} alt="" />

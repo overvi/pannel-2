@@ -29,5 +29,16 @@
   "contact": " راه های ارتباطی",
   "workHours": "  ساعت های دفتر کار مرکزی",
   "workHoursExplicit": "  از 8:00 تا 12:00",
-  "reservationSearch": " جستجوی رزرواسیون"
+  "reservationSearch": " جستجوی رزرواسیون",
+  "accountCenter": "مرکز حساب ",
+  "accountManagement": " مدیریت حساب",
+  "messages": "اعلانات",
+  "type": "نوع",
+  "all": "همه",
+  "notification": "مسیج ها",
+  "date": "تاریخ",
+  "remove": "حذف",
+  "unread": "خوانده نشده ",
+  "read": "خوانده شده",
+  "selectMessages": "انتخاب همه اعلانات"
 }

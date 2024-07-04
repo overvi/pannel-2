@@ -1,6 +1,9 @@
-import { Select, Table, Radio, Button } from "antd";
+import { Button, Radio, Select, Table } from "antd";
+import { Collapse } from "antd/lib";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+
+const { Panel } = Collapse;
 
 const { Option } = Select;
 
@@ -35,7 +38,7 @@ const Messages = () => {
 
   const columns = [
     {
-      title: "اعلانات",
+      title: t("notification"),
       dataIndex: "name",
       key: "name",
       render: (text: string, record: any) => (
@@ -50,7 +53,7 @@ const Messages = () => {
       ),
     },
     {
-      title: "تاریخ",
+      title: t("date"),
       dataIndex: "date",
       key: "date",
     },
@@ -61,22 +64,22 @@ const Messages = () => {
       <div>
         <div className="font-yekan flex items-center gap-3">
           <Radio className="radio" />
-          <p>انتخاب همه اعلانات</p>
+          <p>{t("selectMessages")}</p>
           <div>
             <Button className="rounded-full font-yekan" danger>
-              حذف
+              {t("remove")}
             </Button>
             <Button
               className="mx-3  rounded-full !border-orange-400  font-yekan"
               danger
             >
-              خوانده شده
+              {t("read")}
             </Button>
             <Button
               className="rounded-full !border-orange-400  font-yekan "
               danger
             >
-              خوانده نشده
+              {t("unread")}
             </Button>
           </div>
         </div>
@@ -87,8 +90,8 @@ const Messages = () => {
   return (
     <div dir={en ? "ltr" : "rtl"} className="flex gap-9 mx-3">
       <div className="bg-white mt-3 flex dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl">
-        <div className="flex flex-col pt-20 rounded-full p-3 shadow-md gap-7 items-center ">
-          <div>
+        <div className="flex flex-col pt-20 rounded-full p-1 shadow-md gap-7 items-center ">
+          <div className="bg-orange-400 p-2 rounded-full">
             <svg
               width="32"
               height="32"
@@ -188,18 +191,49 @@ const Messages = () => {
             </svg>
           </div>
         </div>
-        <div className=" mt-16 p-4 px-11 flex flex-col gap-8 font-bold  pr-5">
+        <div className=" mt-16 p-4 w-[11rem] flex flex-col gap-8 font-bold  pr-5">
+          <div dir={en ? "rtl" : "ltr"}>
+            <Collapse accordion className="border-0">
+              <Panel
+                header={<p className="text-base"> {t("management")} </p>}
+                key="1"
+                className={`custom-panel ${
+                  en ? "text-left" : "text-right"
+                }  font-yekan p-0 collapse-pannel bg-white dark:bg-gray-900 `}
+              >
+                <div className="py-2 bg-orange-400 mt-3 rounded-full mb-3 px-2">
+                  <a href=""> {t("management")}</a>
+                </div>
+                <div className="px-2">
+                  <a href=""> آدرس دریافت</a>
+                </div>
+              </Panel>
+            </Collapse>
+          </div>
+          <div dir={en ? "rtl" : "ltr"}>
+            <Collapse accordion className="border-0">
+              <Panel
+                header={<p className="text-base"> {t("users")} </p>}
+                key="1"
+                className={`custom-panel ${
+                  en ? "text-left" : "text-right"
+                }  font-yekan p-0 collapse-pannel bg-white dark:bg-gray-900 `}
+              >
+                <div className="py-2 bg-orange-400 mt-3 rounded-full mb-3 px-2">
+                  <a href="">{t("management")} </a>
+                </div>
+                <div className="px-2">
+                  <a href=""> آدرس دریافت</a>
+                </div>
+              </Panel>
+            </Collapse>
+          </div>
+
           <div>
-            <p>مرکز حساب</p>
+            <p>{t("database")} </p>
           </div>
           <div>
-            <p>مدیریت کاربران </p>
-          </div>
-          <div>
-            <p>مرکز داده </p>
-          </div>
-          <div>
-            <p>پیام ها </p>
+            <p>{t("messages")} </p>
           </div>
         </div>
       </div>
@@ -227,14 +261,16 @@ const Messages = () => {
             />
           </svg>
 
-          <p>{t("nav")}</p>
+          <p>
+            {t("nav")} / {t("messages")}
+          </p>
         </div>
         <div className="bg-white mt-3 min-h-[80vh] dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl p-5">
-          <h1 className="font-bold text-xl">نوع</h1>
+          <h1 className="font-bold text-xl">{t("type")}</h1>
           <div className="flex items-center gap-4 mt-4">
             <div>
               <Select
-                defaultValue="همه"
+                placeholder={t("all")}
                 className="ant-select h-[2.2rem] focus:ring-orange-500 font-yekan"
                 style={{ width: 200 }}
               >
@@ -268,7 +304,7 @@ const Messages = () => {
           </div>
           <Table
             pagination={false}
-            className="w-[66rem] mt-4 message-table"
+            className="w-[65rem] mt-4 message-table"
             dataSource={dataSource}
             columns={columns}
             footer={footerContent}

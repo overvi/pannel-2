@@ -29,5 +29,15 @@
   "contact": "Contact Ways",
   "workHours": "The Avaliable Hours",
   "workHoursExplicit": "from 8pm to 2am",
-  "reservationSearch": "Search Reservations"
+  "reservationSearch": "Search Reservations",
+  "accountCenter": "Account Center",
+  "messages": "Messages",
+  "type": "Type",
+  "all": "All",
+  "notification": "Notification",
+  "date": "Date",
+  "remove": "Delete",
+  "unread": "Not Read",
+  "read": "Read",
+  "selectMessages": "Select All Message"
 }
