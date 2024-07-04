@@ -1,19 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Layout from "./Layout.tsx";
+
 import ThemeProvider from "./components/ToggleColorMode.tsx";
 import "./index.css";
 import { default as Home } from "./pages/Home.tsx";
-import HomeEn from "./pages/HomeEn.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "en/",
-    element: <HomeEn />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
   },
 ]);
 
