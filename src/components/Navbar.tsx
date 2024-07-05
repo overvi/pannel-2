@@ -340,7 +340,10 @@ const ProfilePopover = () => {
             <h1 className="font-bold text-lg"> {t("customerInfo")}</h1>
             <p>Hjys</p>
           </div>
-          <div className="mt-3 flex items-center gap-7" dir="rtl">
+          <div
+            className="mt-3 flex items-center justify-center gap-7"
+            dir="rtl"
+          >
             <button className="flex flex-col justify-center items-center">
               <div className="rounded-full w-fit p-2 bg-gray-50 dark:bg-gray-900">
                 <svg

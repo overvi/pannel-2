@@ -1,95 +1,109 @@
-import { Button, Radio, Select, Table } from "antd";
+import { Button, Table } from "antd";
 import { Collapse } from "antd/lib";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const { Panel } = Collapse;
 
-const { Option } = Select;
-
-const Messages = () => {
+const ReciveAddress = () => {
   const { i18n, t } = useTranslation();
   const en = i18n.language == "en";
-
-  const [selectedRowKey, setSelectedRowKey] = useState(null);
-
-  const onChange = (_e: any, record: any) => {
-    setSelectedRowKey(record.key);
-  };
 
   const dataSource = [
     {
       key: "1",
-      name: "تایید هتل در تاریخ",
-      date: "1403/5/4",
+      name: "   jk09",
+      phone: "099225464",
       address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "idsosopshkll;sppshh-2234",
-      date: "1403/5/4",
-    },
-    {
-      key: "3",
-      name: "test testt testttt tesssst tesssssssttttt",
-      date: "1403/5/4",
+      recive: "تهران-جردن",
     },
   ];
 
   const columns = [
     {
-      title: t("notification"),
+      title: t("reciver"),
       dataIndex: "name",
       key: "name",
-      render: (text: string, record: any) => (
-        <div>
-          <Radio
-            className="radio"
-            checked={selectedRowKey === record.key}
-            onChange={(e) => onChange(e, record)}
-          />
-          {text}
+    },
+    {
+      title: t("phoneNumber"),
+      dataIndex: "phone",
+      key: "phone",
+    },
+    {
+      title: t("deliverRegion"),
+      dataIndex: "recive",
+      key: "recive",
+    },
+    {
+      title: t("addressDetails"),
+      dataIndex: "address",
+      key: "address",
+    },
+    {
+      title: t("actions"),
+      dataIndex: "action",
+      key: "action",
+      render: () => (
+        <div className="flex items-center gap-5">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              opacity="0.4"
+              d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
+              fill="#ABABAB"
+            />
+            <path
+              opacity="0.4"
+              d="M19.02 3.48162C17.08 1.54162 15.18 1.49162 13.19 3.48162L11.98 4.69162C11.88 4.79162 11.84 4.95162 11.88 5.09162C12.64 7.74162 14.76 9.86162 17.41 10.6216C17.45 10.6316 17.49 10.6416 17.53 10.6416C17.64 10.6416 17.74 10.6016 17.82 10.5216L19.02 9.31162C20.01 8.33162 20.49 7.38162 20.49 6.42162C20.5 5.43162 20.02 4.47162 19.02 3.48162Z"
+              fill="#ABABAB"
+            />
+            <path
+              d="M15.61 11.5308C15.32 11.3908 15.04 11.2508 14.77 11.0908C14.55 10.9608 14.34 10.8208 14.13 10.6708C13.96 10.5608 13.76 10.4008 13.57 10.2408C13.55 10.2308 13.48 10.1708 13.4 10.0908C13.07 9.81078 12.7 9.45078 12.37 9.05078C12.34 9.03078 12.29 8.96078 12.22 8.87078C12.12 8.75078 11.95 8.55078 11.8 8.32078C11.68 8.17078 11.54 7.95078 11.41 7.73078C11.25 7.46078 11.11 7.19078 10.97 6.91078C10.83 6.61078 10.72 6.32078 10.62 6.05078L4.33995 12.3308C4.20995 12.4608 4.08995 12.7108 4.05995 12.8808L3.51995 16.7108C3.41995 17.3908 3.60995 18.0308 4.02995 18.4608C4.38995 18.8108 4.88995 19.0008 5.42995 19.0008C5.54995 19.0008 5.66995 18.9908 5.78995 18.9708L9.62995 18.4308C9.80995 18.4008 10.06 18.2808 10.18 18.1508L16.46 11.8708C16.18 11.7708 15.91 11.6608 15.61 11.5308Z"
+              fill="#ABABAB"
+            />
+          </svg>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.8025 3.9225C14.595 3.8025 13.3875 3.7125 12.1725 3.645V3.6375L12.0075 2.6625C11.895 1.9725 11.73 0.9375 9.975 0.9375H8.01C6.2625 0.9375 6.0975 1.9275 5.9775 2.655L5.82 3.615C5.1225 3.66 4.425 3.705 3.7275 3.7725L2.1975 3.9225C1.8825 3.9525 1.6575 4.23 1.6875 4.5375C1.7175 4.845 1.9875 5.07 2.3025 5.04L3.8325 4.89C7.7625 4.5 11.7225 4.65 15.6975 5.0475C15.72 5.0475 15.735 5.0475 15.7575 5.0475C16.0425 5.0475 16.29 4.83 16.32 4.5375C16.3425 4.23 16.1175 3.9525 15.8025 3.9225Z"
+              fill="#DC2626"
+            />
+            <path
+              opacity="0.3991"
+              d="M14.4226 6.105C14.2426 5.9175 13.9951 5.8125 13.7401 5.8125H4.26006C4.00506 5.8125 3.75006 5.9175 3.57756 6.105C3.40506 6.2925 3.30756 6.5475 3.32256 6.81L3.78756 14.505C3.87006 15.645 3.97506 17.07 6.59256 17.07H11.4076C14.0251 17.07 14.1301 15.6525 14.2126 14.505L14.6776 6.8175C14.6926 6.5475 14.5951 6.2925 14.4226 6.105Z"
+              fill="#DC2626"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.18506 12.75C7.18506 12.4393 7.4369 12.1875 7.74756 12.1875H10.2451C10.5557 12.1875 10.8076 12.4393 10.8076 12.75C10.8076 13.0607 10.5557 13.3125 10.2451 13.3125H7.74756C7.4369 13.3125 7.18506 13.0607 7.18506 12.75Z"
+              fill="#DC2626"
+            />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6.5625 9.75C6.5625 9.43934 6.81434 9.1875 7.125 9.1875H10.875C11.1857 9.1875 11.4375 9.43934 11.4375 9.75C11.4375 10.0607 11.1857 10.3125 10.875 10.3125H7.125C6.81434 10.3125 6.5625 10.0607 6.5625 9.75Z"
+              fill="#DC2626"
+            />
+          </svg>
         </div>
       ),
     },
-    {
-      title: t("date"),
-      dataIndex: "date",
-      key: "date",
-    },
   ];
-
-  const footerContent = () => (
-    <div>
-      <div>
-        <div className="font-yekan flex items-center gap-3">
-          <Radio className="radio" />
-          <p>{t("selectMessages")}</p>
-          <div>
-            <Button className="rounded-full font-yekan" danger>
-              {t("remove")}
-            </Button>
-            <Button
-              className="mx-3  rounded-full !border-orange-400  font-yekan"
-              danger
-            >
-              {t("read")}
-            </Button>
-            <Button
-              className="rounded-full !border-orange-400  font-yekan "
-              danger
-            >
-              {t("unread")}
-            </Button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 
   return (
     <div dir={en ? "ltr" : "rtl"} className="flex gap-9 mx-3">
-      <div className="bg-white mt-3 flex dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl">
+      <div className="bg-white mt-3 flex dark:bg-gray-900 min-h-[85vh]  dark:text-white dark:border-gray-500 rounded-3xl">
         <div className="flex flex-col pt-20 rounded-full p-1 shadow-md gap-7 items-center ">
           <div className="bg-orange-400 p-2 rounded-full">
             <svg
@@ -238,7 +252,7 @@ const Messages = () => {
         </div>
       </div>
       <div>
-        <div className="flex dark:text-white gap-2">
+        <div className="flex text-gray-400 dark:text-white gap-2">
           <svg
             width="18"
             height="18"
@@ -262,52 +276,23 @@ const Messages = () => {
           </svg>
 
           <p>
-            {t("nav")} / {t("messages")}
+            {t("nav")} / {t("accountCenter")} / {t("recive")}
           </p>
         </div>
-        <div className="bg-white mt-3 min-h-[80vh] dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl p-5">
-          <h1 className="font-bold text-xl">{t("type")}</h1>
-          <div className="flex items-center gap-4 mt-4">
-            <div>
-              <Select
-                placeholder={t("all")}
-                className="ant-select h-[2.2rem] focus:ring-orange-500 font-yekan"
-                style={{ width: 200 }}
-              >
-                <Option value="1">1</Option>
-                <Option value="2">2</Option>
-                <Option value="disabled" disabled>
-                  3
-                </Option>
-              </Select>
-            </div>
-            <button className="p-[.5rem]   flex items-center gap-2 text-white bg-green-600 rounded-full">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.4"
-                  d="M11.0095 20.02C15.9856 20.02 20.0195 15.9861 20.0195 11.01C20.0195 6.03391 15.9856 2 11.0095 2C6.03343 2 1.99951 6.03391 1.99951 11.01C1.99951 15.9861 6.03343 20.02 11.0095 20.02Z"
-                  fill="white"
-                />
-                <path
-                  d="M21.9901 18.95C21.6601 18.34 20.9601 18 20.0201 18C19.3101 18 18.7001 18.29 18.3401 18.79C17.9801 19.29 17.9001 19.96 18.1201 20.63C18.5501 21.93 19.3001 22.22 19.7101 22.27C19.7701 22.28 19.8301 22.28 19.9001 22.28C20.3401 22.28 21.0201 22.09 21.6801 21.1C22.2101 20.33 22.3101 19.56 21.9901 18.95Z"
-                  fill="white"
-                />
-              </svg>
-              <p>{t("search")}</p>
-            </button>
+        <div className="bg-white mt-3 min-h-[30vh] dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl p-5">
+          <div className="flex items-center justify-between">
+            <h1 className="font-bold text-xl">{t("recive")} </h1>
+            <Button className="rounded-full border-0 text-white  font-yekan bg-orange-500">
+              {t("newAddress")}
+            </Button>
           </div>
+
           <Table
             pagination={false}
-            className="w-[65rem] mt-4 message-table "
+            className="w-[65rem] mt-4 message-table"
             dataSource={dataSource}
             columns={columns}
-            footer={footerContent}
+            bordered
           />
         </div>
       </div>
@@ -315,4 +300,4 @@ const Messages = () => {
   );
 };
 
-export default Messages;
+export default ReciveAddress;

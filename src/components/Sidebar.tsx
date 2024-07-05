@@ -15,7 +15,7 @@ const Sidebar = () => {
         en ? "ml-2" : "mr-2"
       } mb-3 rounded-full p-2 w-fit min-h-[740px] flex justify-center items-center `}
     >
-      <div className="space-y-10 flex flex-col items-center">
+      <div className="space-y-10 flex  flex-col items-center">
         <div className="bg-orange-400 p-2 rounded-full">
           <img width="38" src={hotels} alt="" />
         </div>

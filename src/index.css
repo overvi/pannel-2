@@ -74,6 +74,22 @@
   .collapse-pannel .ant-collapse-content {
     @apply dark:bg-gray-900;
   }
+
+  .account-table table {
+    @apply border border-gray-200  dark:border-gray-800 rounded-[1.4rem] overflow-hidden;
+  }
+
+  .account-table .ant-table-cell:nth-child(1) {
+    @apply bg-gray-50 dark:bg-gray-900;
+  }
+
+  .account-table .ant-table-cell {
+    @apply !border-gray-200 dark:border-gray-800;
+  }
+
+  .account-table .ant-table-row td {
+    @apply dark:!border-gray-800;
+  }
 }
 
 .ant-popover-inner {
@@ -94,4 +110,12 @@
 
 .ant-collapse-content-box {
   padding: 0 !important;
+}
+
+.account-table .ant-table-row:last-child td {
+  border: 0 !important;
+}
+
+.account-table .ant-table {
+  border-radius: 1.4rem;
 }
