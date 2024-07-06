@@ -9,6 +9,8 @@ import { default as Home } from "./pages/Home.tsx";
 import Messages from "./pages/Messages.tsx";
 import Account from "./pages/Account.tsx";
 import ReciveAddress from "./pages/ReciveAddress.tsx";
+import Voucher from "./pages/Voucher.tsx";
+import Datacenter from "./pages/DateCenter.tsx";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: "/recive",
         element: <ReciveAddress />,
+      },
+      {
+        path: "/voucher",
+        element: <Voucher />,
+      },
+      {
+        path: "/datacenter",
+        element: <Datacenter />,
       },
     ],
   },

@@ -57,5 +57,16 @@
   "reciver": "Reciver",
   "deliverRegion": "Deliver Region",
   "addressDetails": "Address Details",
-  "actions": "Actions"
+  "actions": "Actions",
+  "voucherSettings": "Voucher Settings",
+  "userManagement": "User Management",
+  "companyName": "Company Name",
+  "active": "Active",
+  "deactive": "Deactive",
+  "logo": "Logo",
+  "uploadPhoto": "Upload Photo",
+  "save": "Save",
+  "resevations": "Reservations",
+  "canceledReservations": "Canceled Reservations",
+  "notPayed": "Not Payed"
 }

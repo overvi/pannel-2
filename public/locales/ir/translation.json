@@ -58,5 +58,16 @@
   "reciver": "گیرنده",
   "deliverRegion": "منطقه دریافت",
   "addressDetails": "جزییات آدرس",
-  "actions": "عملیات ها"
+  "actions": "عملیات ها",
+  "voucherSettings": " تنظیمات واچر",
+  "userManagement": "مدیریت کاربران ",
+  "companyName": " نام شرکت",
+  "active": "فعال",
+  "deactive": "غیرفعال",
+  "logo": "لوگو",
+  "uploadPhoto": " آپلود عکس",
+  "save": "ذخیره",
+  "resevations": "رزرواسیون ها",
+  "canceledReservations": " رزرو های کنسل شده",
+  "notPayed": " پرداخت نشده"
 }
