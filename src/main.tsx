@@ -10,7 +10,7 @@ import Messages from "./pages/Messages.tsx";
 import Account from "./pages/Account.tsx";
 import ReciveAddress from "./pages/ReciveAddress.tsx";
 import Voucher from "./pages/Voucher.tsx";
-import Datacenter from "./pages/DateCenter.tsx";
+import DataCenter from "./pages/DataCenter.tsx";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/datacenter",
-        element: <Datacenter />,
+        element: <DataCenter />,
       },
     ],
   },
