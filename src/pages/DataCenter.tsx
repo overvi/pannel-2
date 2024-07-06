@@ -12,7 +12,7 @@ const { RangePicker } = DatePicker;
 
 const { Option } = Select;
 
-const Datacenter = () => {
+const DataCenter = () => {
   const { i18n, t } = useTranslation();
   const en = i18n.language == "en";
 
@@ -308,7 +308,7 @@ const Datacenter = () => {
   );
 };
 
-export default Datacenter;
+export default DataCenter;
 
 interface DonutChartProps {}
 
