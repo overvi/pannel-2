@@ -90,6 +90,31 @@
   .account-table .ant-table-row td {
     @apply dark:!border-gray-800;
   }
+
+  .hotels-collapse .ant-collapse-expand-icon {
+    @apply bg-gray-300 dark:bg-gray-900 dark:border dark:border-gray-800 rounded-full !p-0 w-[22px]  flex justify-center;
+  }
+
+  .custom-checkbox .ant-checkbox-wrapper {
+    @apply text-orange-500;
+  }
+
+  .custom-checkbox .ant-checkbox-checked .ant-checkbox-inner {
+    @apply bg-orange-500 border-orange-500;
+  }
+
+  .custom-checkbox .ant-checkbox:hover .ant-checkbox-inner,
+  .custom-checkbox .ant-checkbox-input:focus + .ant-checkbox-inner {
+    @apply border-orange-500;
+  }
+
+  .custom-checkbox .ant-checkbox-checked::after {
+    @apply border-orange-500;
+  }
+
+  .tabs .ant-tabs-nav-list {
+    margin: auto;
+  }
 }
 
 .ant-popover-inner {
@@ -118,4 +143,16 @@
 
 .account-table .ant-table {
   border-radius: 1.4rem;
+}
+
+.mapbox-logo {
+  display: none !important;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.ant-tabs-tab {
+  margin-left: 2rem;
 }

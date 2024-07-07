@@ -13,7 +13,27 @@ const useAtheme = () => {
         itemSelectedBg: "orange",
         itemSelectedColor: "white",
       },
+
+      Slider: {
+        trackBg: "orange",
+        handleColor: "orange",
+        handleActiveColor: "orange",
+        trackHoverBg: "orange",
+      },
+
+      Tabs: {
+        itemColor: darkMode !== "dark" ? "white" : "black",
+        itemActiveColor: darkMode !== "dark" ? "white" : "black",
+        itemHoverColor: darkMode !== "dark" ? "white" : "black",
+        itemSelectedColor: darkMode !== "dark" ? "white" : "black",
+        inkBarColor: "orange",
+      },
     },
+
+    token: {
+      fontFamily: "yekan",
+    },
+
     algorithm: darkMode === "dark" ? defaultAlgorithm : darkAlgorithm,
   };
 };
