@@ -34,7 +34,7 @@ const useAtheme = () => {
       fontFamily: "yekan",
     },
 
-    algorithm: darkMode === "dark" ? defaultAlgorithm : darkAlgorithm,
+    algorithm: darkMode == "dark" ? defaultAlgorithm : darkAlgorithm,
   };
 };
 

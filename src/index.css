@@ -156,3 +156,20 @@
 .ant-tabs-tab {
   margin-left: 2rem;
 }
+
+.hotel-grid {
+  display: grid;
+  direction: ltr;
+  grid-template-areas:
+    "one two two"
+    "one three four";
+}
+
+.room-table .ant-table-thead > tr > th {
+  text-align: center;
+}
+
+.ant-image-mask {
+  border-radius: 0 0 2rem !important;
+  width: 11.75rem;
+}
