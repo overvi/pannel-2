@@ -1,7 +1,6 @@
 import { Button, Radio, Steps, Table } from "antd";
 import { useTranslation } from "react-i18next";
 import Sidebar from "../components/Sidebar";
-import icon from "../assets/edit-2.svg";
 
 const { Step } = Steps;
 const columns = [
@@ -99,7 +98,7 @@ const Booking = () => {
       title: `${t("adult")} / ${t("child")}`,
       dataIndex: "adultChild",
       key: "adultChild",
-      render: (text: any, record: any) => {
+      render: () => {
         return (
           <div className="flex  flex-col">
             <Button
