@@ -14,6 +14,7 @@ import DataCenter from "./pages/DataCenter.tsx";
 import Hotels from "./pages/Hotels.tsx";
 import HotelDetails from "./pages/HotelDetails.tsx";
 import Booking from "./pages/Booking.tsx";
+import Reservation from "./pages/Reservation.tsx";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/booking",
         element: <Booking />,
+      },
+      {
+        path: "/reservation/1",
+        element: <Reservation />,
       },
     ],
   },

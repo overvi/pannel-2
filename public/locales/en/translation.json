@@ -162,5 +162,21 @@
   "add": "Add",
   "guestNumber": "Guests Number",
   "contactDetailsInfo": "The contact information provided is given to the hotel you are booking with to contact you in case of an operational disruption.",
-  "guestDetails": "Guest Details"
+  "guestDetails": "Guest Details",
+
+  "recieveNewLetter": "Receive New Letter",
+  "voucher": "Voucher",
+  "espinsasHotel": "Espinas Hotel",
+  "city": "City",
+  "guest": "Guest (First and Last Name)",
+  "localeDate": "Your Local Time",
+  "localeHotelDate": "Hotel Local Time",
+  "remainingDays": "Remaining Days",
+  "pay": "Pay",
+  "cancel": "Cancel",
+  "cancelingConditions": "Canceling Conditions",
+  "priceNight": "Price / Night",
+  "stayDetails": "Stay Details",
+  "confirmed": "Confirmed",
+  "reservationDetails": "Reservation Details"
 }
