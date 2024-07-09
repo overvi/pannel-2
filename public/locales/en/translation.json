@@ -154,5 +154,13 @@
   "fourStarHotel": "Four-star hotel",
   "details": "Details",
   "laws": "Law",
-  "services": "Services"
+  "services": "Services",
+  "contactDetails": "Contact Information",
+  "gender": "Gender",
+  "name": "Name",
+  "lastName": "Last Name",
+  "add": "Add",
+  "guestNumber": "Guests Number",
+  "contactDetailsInfo": "The contact information provided is given to the hotel you are booking with to contact you in case of an operational disruption.",
+  "guestDetails": "Guest Details"
 }

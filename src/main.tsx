@@ -13,6 +13,7 @@ import Voucher from "./pages/Voucher.tsx";
 import DataCenter from "./pages/DataCenter.tsx";
 import Hotels from "./pages/Hotels.tsx";
 import HotelDetails from "./pages/HotelDetails.tsx";
+import Booking from "./pages/Booking.tsx";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "/hotels/1",
         element: <HotelDetails />,
+      },
+      {
+        path: "/booking",
+        element: <Booking />,
       },
     ],
   },
