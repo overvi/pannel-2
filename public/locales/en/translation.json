@@ -178,5 +178,18 @@
   "priceNight": "Price / Night",
   "stayDetails": "Stay Details",
   "confirmed": "Confirmed",
-  "reservationDetails": "Reservation Details"
+  "reservationDetails": "Reservation Details",
+  "acceptUserDetails": "Confirm Reservation Details",
+  "acceptGuestDetails": "Confirm Guest Details",
+  "messageRequest": "Message / Request",
+  "next": "Next",
+  "prev": "Back",
+  "balanceError": "Insufficient Account Balance!",
+  "reservationNumber": "Reservation Count",
+  "reservationError": "Unfortunately, your reservation encountered an error and you will be automatically redirected to the hotel page within a few seconds.",
+  "refresh": "Retry",
+  "reservationSuccess": "Payment was Successful",
+  "trackNumber": "Tracking Number",
+  "downloadVoucher": "Download Voucher",
+  "prevGuests": "Previous Travelers List"
 }

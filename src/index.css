@@ -173,3 +173,15 @@
   border-radius: 0 0 2rem !important;
   width: 11.75rem;
 }
+
+.guests-table .ant-table-footer {
+  background-color: inherit;
+}
+
+.steps
+  .ant-steps-item-finish
+  .ant-steps-item-container
+  .ant-steps-item-content
+  .ant-steps-item-title::after {
+  background-color: orange;
+}

@@ -181,5 +181,19 @@
   "priceNight": "قیمت / شب",
   "stayDetails": "اطلاعات اقامت",
   "confirmed": "تایید شده",
-  "reservationDetails": "اطلاعات رزرو"
+  "reservationDetails": "اطلاعات رزرو",
+
+  "acceptUserDetails": "تایید اطلاعات رزرو کننده",
+  "acceptGuestDetails": "تایید اطلاعات مهمانان",
+  "messageRequest": " پیام / درخواست",
+  "next": "بعدی",
+  "prev": "بازگشت",
+  "balanceError": "اعتبار حساب کافی نیست!",
+  "reservationNumber": "شمارش رزرو",
+  "reservationError": "متاسفانه رزرو شما با خطا مواجه شد و طی چند ثانیه آینده به صورت خودکار به صفحه هتل انتقال پیدا می کنید.",
+  "refresh": "تلاش مجدد",
+  "reservationSuccess": "پرداخت موفقیت آمیز بود",
+  "trackNumber": "شماره رهگیری",
+  "downloadVoucher": "دانلود واچر",
+  "prevGuests": "لیست مسافران قبلی"
 }

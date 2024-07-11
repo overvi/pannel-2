@@ -58,7 +58,7 @@ const router = createBrowserRouter([
         element: <Booking />,
       },
       {
-        path: "/reservation/1",
+        path: "زبطظ",
         element: <Reservation />,
       },
     ],
