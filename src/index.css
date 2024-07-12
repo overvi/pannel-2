@@ -165,8 +165,12 @@
     "one three four";
 }
 
-.room-table .ant-table-thead > tr > th {
+.room-table , .log-table .ant-table-thead > tr > th {
   text-align: center;
+}
+
+.log-table  .ant-table-tbody > tr  > td {
+  text-wrap: nowrap;
 }
 
 .ant-image-mask {

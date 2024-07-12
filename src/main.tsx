@@ -5,15 +5,16 @@ import Layout from "./Layout.tsx";
 
 import ThemeProvider from "./components/ToggleColorMode.tsx";
 import "./index.css";
-import { default as Home } from "./pages/Home.tsx";
-import Messages from "./pages/Messages.tsx";
 import Account from "./pages/Account.tsx";
+import Booking from "./pages/Booking.tsx";
+import DataCenter from "./pages/DataCenter.tsx";
+import { default as Home } from "./pages/Home.tsx";
+import HotelDetails from "./pages/HotelDetails.tsx";
+import Hotels from "./pages/Hotels.tsx";
+import Logs from "./pages/Logs.tsx";
+import Messages from "./pages/Messages.tsx";
 import ReciveAddress from "./pages/ReciveAddress.tsx";
 import Voucher from "./pages/Voucher.tsx";
-import DataCenter from "./pages/DataCenter.tsx";
-import Hotels from "./pages/Hotels.tsx";
-import HotelDetails from "./pages/HotelDetails.tsx";
-import Booking from "./pages/Booking.tsx";
 import Reservation from "./pages/Reservation.tsx";
 
 const router = createBrowserRouter([
@@ -57,8 +58,13 @@ const router = createBrowserRouter([
         path: "/booking",
         element: <Booking />,
       },
+
       {
-        path: "زبطظ",
+        path: "/logs",
+        element: <Logs />,
+      },
+      {
+        path: "/reservations/1",
         element: <Reservation />,
       },
     ],
