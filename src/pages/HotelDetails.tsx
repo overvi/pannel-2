@@ -3,6 +3,7 @@ import {
   Checkbox,
   DatePicker,
   Image,
+  Popover,
   Radio,
   Select,
   Table,
@@ -26,6 +27,29 @@ const HotelDetails = () => {
   const { t, i18n } = useTranslation();
   const en = i18n.language == "en";
 
+  const PopoverContent = () => {
+    return (
+      <div className="bg-orange-400 p-4  rounded-3xl">
+        <div className="rounded-3xl bg-white dark:bg-gray-950  p-3">
+          <p className="border-b pb-2">بکشنبه 03 / 16</p>
+          <div className="mt-3">
+            <p className="text-green-500 font-bold text-lg">USD 32.8</p>
+            <p>صبحانه با ناهار یا صبحانه با شام</p>
+          </div>
+        </div>
+        <div className="mt-3 text-right dark:text-black text-white">
+          <p>نوع اتاق : دلوکس کابل توبین</p>
+          <p>نوع تخت: یک تخت دونفره</p>
+          <p>میانگین قیمت اتاق برای یک شب: 2.840.000 تومان</p>
+          <p>
+            قیمت کل: <span className="text-black">2.840.000</span> تومان (یک
+            اتاق)
+          </p>
+        </div>
+      </div>
+    );
+  };
+
   const columns = [
     {
       title: t("allRooms"),
@@ -39,10 +63,16 @@ const HotelDetails = () => {
       key: "meal",
       colSpan: 1,
       render: () => (
-        <div className="text-center">
-          <p>یک تخت دو نفره</p>
-          <p className="text-gray-400">صبحانه</p>
-        </div>
+        <Popover
+          rootClassName="hotel-popover w-[19rem] text-center"
+          placement="top"
+          content={PopoverContent}
+        >
+          <div className="text-center">
+            <p>یک تخت دو نفره</p>
+            <p className="text-gray-400">صبحانه</p>
+          </div>
+        </Popover>
       ),
     },
     {

@@ -18,6 +18,7 @@ const Navbar = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+    localStorage.setItem("language", lng);
   };
 
   const en = i18n.language == "en";
@@ -97,6 +98,7 @@ const FavoritesPopover = () => {
 
   return (
     <Popover
+      rootClassName="nav-popover"
       content={
         <div dir="rtl" className="font-yekan w-[25rem] p-2 rounded-full ">
           <div>
@@ -172,6 +174,7 @@ const ContactPopover = () => {
 
   return (
     <Popover
+      rootClassName="nav-popover"
       content={
         <div dir="rtl" className="font-yekan w-[25rem] p-2 rounded-full ">
           <div>
@@ -258,6 +261,7 @@ const NotificationPopover = () => {
 
   return (
     <Popover
+      rootClassName="nav-popover"
       content={
         <div dir="rtl" className="font-yekan w-[25rem] p-2 pb-20 rounded-full ">
           <div>
@@ -308,7 +312,7 @@ const NotificationPopover = () => {
       }
       trigger="click"
       open={notficiationM}
-      className="rounded-full profile-popover cursor-pointer "
+      className="rounded-full  profile-popover cursor-pointer "
       onOpenChange={setNotficationM}
       placement="topLeft"
     >
@@ -326,6 +330,7 @@ const ProfilePopover = () => {
 
   return (
     <Popover
+      rootClassName="nav-popover"
       content={
         <div dir="rtl" className="font-yekan w-[20rem] rounded-full ">
           <div dir="rtl" className="border-b pb-3 p-2">

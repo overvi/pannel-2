@@ -5,7 +5,11 @@ import circle from "../assets/dollar-circle.svg";
 import grid from "../assets/grid-6.svg";
 import { Link } from "react-router-dom";
 
-const Sidebar = () => {
+type ActiveSection = "booking" | "hotels";
+
+const activeClassNames = ["bg-orange-400", "w-[38px]", "p-2", "rounded-full"];
+
+const Sidebar = ({ active }: { active?: ActiveSection }) => {
   const { i18n } = useTranslation();
 
   const en = i18n.language == "en";
@@ -17,12 +21,15 @@ const Sidebar = () => {
         } mb-3 rounded-full p-2 w-fit min-h-[540px] h-fit fixed flex justify-center items-center `}
       >
         <div className="space-y-10 flex  flex-col items-center">
-          <div className="bg-orange-400 w-[38px] p-2 rounded-full">
-            <img width="38" src={hotels} alt="" />
-          </div>
-          <div>
+          <a href="/" className={!active ? activeClassNames.join(" ") : ""}>
+            <img src={hotels} alt="" />
+          </a>
+          <a
+            href="/booking"
+            className={active == "booking" ? activeClassNames.join(" ") : ""}
+          >
             <img src={grid} alt="" />
-          </div>
+          </a>
           <div>
             <img src={cloud} alt="" />
           </div>
@@ -32,7 +39,7 @@ const Sidebar = () => {
             </div>
           </Link>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 };

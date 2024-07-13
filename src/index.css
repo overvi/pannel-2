@@ -117,12 +117,21 @@
   }
 }
 
-.ant-popover-inner {
+.nav-popover .ant-popover-inner {
   border-radius: 1.4rem !important;
 }
 
-.ant-popover-arrow {
+.nav-popover .ant-popover-arrow {
   left: 17px !important;
+}
+
+.hotel-popover .ant-popover-inner {
+  border-radius: 1.4rem !important;
+  padding: 0;
+}
+
+.hotel-popover .ant-popover-arrow::before {
+  background-color: orange !important;
 }
 
 .ant-collapse {
@@ -165,11 +174,12 @@
     "one three four";
 }
 
-.room-table , .log-table .ant-table-thead > tr > th {
+.room-table,
+.log-table .ant-table-thead > tr > th {
   text-align: center;
 }
 
-.log-table  .ant-table-tbody > tr  > td {
+.log-table .ant-table-tbody > tr > td {
   text-wrap: nowrap;
 }
 

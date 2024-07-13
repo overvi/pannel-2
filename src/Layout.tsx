@@ -16,6 +16,8 @@ import irTranslation from "../public/locales/ir/translation.json";
 import fa_IR from "antd/lib/locale/fa_IR";
 import en_US from "antd/lib/locale/en_US";
 
+const savedLanguage = localStorage.getItem("language") || "en"; // Default to 'en' if no language is saved
+
 i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
@@ -23,7 +25,7 @@ i18n
       en: { translation: enTranslation },
       ir: { translation: irTranslation },
     },
-    lng: "ir", // default language
+    lng: savedLanguage, // default language
     fallbackLng: "en", // fallback language
     interpolation: {
       escapeValue: false, // react already safes from xss

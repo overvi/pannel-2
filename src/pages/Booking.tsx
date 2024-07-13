@@ -34,7 +34,7 @@ const Booking = () => {
   };
   return (
     <div dir={en ? "ltr" : "rtl"} className="flex gap-9">
-      <Sidebar />
+      <Sidebar active="booking" />
       <div className="h-fit w-full">
         <div className="flex dark:text-white gap-2">
           <svg
