@@ -16,6 +16,8 @@ import Messages from "./pages/Messages.tsx";
 import ReciveAddress from "./pages/ReciveAddress.tsx";
 import Voucher from "./pages/Voucher.tsx";
 import Reservation from "./pages/Reservation.tsx";
+import Login from "./pages/Login.tsx";
+import LoginB2 from "./pages/LoginB2.tsx";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +70,14 @@ const router = createBrowserRouter([
         element: <Reservation />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/login/b2",
+    element: <LoginB2 />,
   },
 ]);
 

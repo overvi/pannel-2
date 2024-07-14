@@ -4,6 +4,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        lines: "url('../src/assets/lines.png')",
+        nature: "url('../src/assets/nature.png')",
+      },
       colors: {
         gray: {
           950: "#131313",
