@@ -12,7 +12,7 @@ import {
   Tag,
 } from "antd";
 import { JalaliLocaleListener } from "antd-jalali";
-import { useTranslation } from "react-i18next";
+import useTranslation from "../hooks/useTranslation";
 import fourStar from "../assets/fourStar.png";
 import hotel3 from "../assets/hotel-3.png";
 import more from "../assets/hotel-more.png";
@@ -24,8 +24,7 @@ const { RangePicker } = DatePicker;
 const { Option } = Select;
 
 const HotelDetails = () => {
-  const { t, i18n } = useTranslation();
-  const en = i18n.language == "en";
+  const { t, en } = useTranslation();
 
   const PopoverContent = () => {
     return (
@@ -632,21 +631,25 @@ const HotelDetails = () => {
               </div>
               <div className="space-y-3 border-b pb-5 dark:border-gray-800">
                 <div>
-                  <label className="mb-2 block" htmlFor="">
+                  <label className="mb-2 block" htmlFor="date">
                     {t("enterExit")}
                   </label>
                   <JalaliLocaleListener />
 
-                  <RangePicker className="rounded-full w-fit font-yekan  py-[.4rem]  " />
+                  <RangePicker
+                    id="date"
+                    className="rounded-full w-fit font-yekan  py-[.4rem]  "
+                  />
                 </div>
                 <div>
-                  <label className="block mb-2" htmlFor="my-select">
+                  <label className="block mb-2" htmlFor="guests">
                     {t("guests")}
                   </label>
                   <Select
                     className="ant-select font-yekan placeholder:!font-yekan "
                     placeholder={t("all")}
                     style={{ width: "100%" }}
+                    id="guests"
                   >
                     <Option value="1">1</Option>
                     <Option value="2">2</Option>

@@ -61,10 +61,11 @@ const HomeEn = () => {
               </div>
               <form className="space-y-5">
                 <div className="w-full mt-3  ">
-                  <label className="block mb-2" htmlFor="">
+                  <label className="block mb-2" htmlFor="hotelName">
                     {t("hotelName")}
                   </label>
                   <Input
+                    id="hotelName"
                     className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                     type="text"
                     placeholder={t("hotelPlaceholder")}
@@ -77,11 +78,12 @@ const HomeEn = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex gap-3 items-center">
                     <div>
-                      <label className="block" htmlFor="my-select">
+                      <label className="block" htmlFor="adult">
                         {t("adult")}
                       </label>
                       <Select
                         defaultValue="1"
+                        id="adult"
                         className="ant-select "
                         style={{ width: 70 }}
                       >
@@ -93,10 +95,11 @@ const HomeEn = () => {
                       </Select>
                     </div>
                     <div>
-                      <label htmlFor="my-select" className="block ">
+                      <label htmlFor="child" className="block">
                         {t("child")}
                       </label>
                       <Select
+                        id="child"
                         className="ant-select"
                         defaultValue="2"
                         style={{ width: 70 }}

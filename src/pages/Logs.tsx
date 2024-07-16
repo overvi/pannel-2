@@ -66,56 +66,66 @@ const Logs = () => {
           </div>
           <Form className="grid grid-cols-4 gap-4">
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="reservationDate">
                 {t("reservationDate")}
               </label>
               <JalaliLocaleListener />
 
-              <RangePicker className="rounded-full font-yekan w-full py-[.4rem]  " />
+              <RangePicker
+                id="reservationDate"
+                className="rounded-full font-yekan w-full py-[.4rem]  "
+              />
             </div>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="enterExit">
                 {t("enterData")}
                 {t("endDate")}
               </label>
-              <RangePicker className="rounded-full font-yekan w-full py-[.4rem]  " />
+              <RangePicker
+                id="enterExit"
+                className="rounded-full font-yekan w-full py-[.4rem]  "
+              />
             </div>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="reservationNumber">
                 {t("reservationNumber")}
               </label>
               <Input
+                id="reservationNumber"
                 className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                 type="text"
                 placeholder={t("reservationNumber")}
               />
             </div>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="guests">
                 {t("guests")}
               </label>
               <Input
+                id="guests"
                 className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                 type="text"
                 placeholder={t("suename")}
               />
             </div>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="hotelName">
                 {t("hotelName")}
               </label>
               <Input
+                id="hotelName"
                 className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                 type="text"
                 placeholder={t("hotelPlaceholder")}
               />
             </div>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="reservationStatus">
                 {t("reservationStatus")}
               </label>
               <div className="">
                 <Select
+                  id="reservationStatus"
                   placeholder="همه"
                   className="custom-select h-[2.5rem] w-full"
                 >
@@ -124,11 +134,12 @@ const Logs = () => {
               </div>
             </div>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="balanceStatus">
                 {t("balanceStatus")}
               </label>
               <div className="">
                 <Select
+                  id="balanceStatus"
                   placeholder="همه"
                   className="custom-select h-[2.5rem] w-full"
                 >
@@ -137,11 +148,12 @@ const Logs = () => {
               </div>
             </div>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="payingChannel">
                 {t("payingChannel")}
               </label>
               <div className="">
                 <Select
+                  id="payingChannel"
                   placeholder="همه"
                   className="custom-select h-[2.5rem] w-full"
                 >

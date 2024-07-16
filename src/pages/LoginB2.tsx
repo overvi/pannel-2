@@ -11,20 +11,22 @@ const LoginB2 = () => {
         <img src={desc} width="300" alt="" />
         <form action="" dir="rtl" className="space-y-5">
           <div className="w-full mt-3  ">
-            <label className="block mb-2" htmlFor="">
+            <label className="block mb-2" htmlFor="username">
               <span className="text-red-500">*</span> نام کاربری
             </label>
             <Input
+              id="username"
               className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
               type="text"
               placeholder="aliowed@@@m.com"
             />
           </div>
           <div className="w-full mt-3  ">
-            <label className="block mb-2" htmlFor="">
+            <label className="block mb-2" htmlFor="password">
               <span className="text-red-500">*</span> رمز عبور
             </label>
             <Input.Password
+              id="password"
               className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
               type="text"
               placeholder=" 123456"

@@ -8,17 +8,23 @@ const DatePickers = () => {
   return (
     <div className="mt-3 flex items-center  gap-3 justify-between">
       <div className="basis-full">
-        <h2 className="mb-2">{t("enterDate")}</h2>
+        <label htmlFor="enterDate" className="mb-2 block">
+          {t("enterDate")}
+        </label>
         <JalaliLocaleListener />
 
         <DatePicker
+          id="enterDate"
           className="rounded-full font-yekan w-full py-[.4rem]  "
           placeholder={t("enterDate")}
         />
       </div>
       <div className="basis-full">
-        <h2 className="mb-2"> {t("endDate")}</h2>
+        <label htmlFor="endDate" className="mb-2 block">
+          {t("endDate")}
+        </label>
         <DatePicker
+          id="endDate"
           className="rounded-full font-yekan w-full py-[.4rem]  "
           placeholder={t("endDate")}
         />

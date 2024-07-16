@@ -193,128 +193,134 @@ const Voucher = () => {
           <div className="bg-white mt-3 min-h-[30vh] dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl p-5">
             <div>
               <h1 className="font-bold text-xl"> {t("voucherSettings")} </h1>
-              <div className="w-full mt-3 min-w-[31rem] ">
-                <label className="block mb-2" htmlFor="">
-                  {t("companyName")}
-                </label>
-                <Input
-                  className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
-                  type="text"
-                  placeholder={t("companyName")}
-                />
-              </div>
-              <div className="w-full mt-3 min-w-[31rem] ">
-                <label className="block mb-2" htmlFor="">
-                  {t("phoneNumber")}
-                </label>
-                <Input
-                  className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
-                  type="text"
-                  placeholder={t("phoneNumber")}
-                />
-              </div>
-              <div className="w-full mt-3 min-w-[31rem] ">
-                <label className="block mb-2" htmlFor="">
-                  {t("email")}
-                </label>
-                <Input
-                  className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
-                  type="text"
-                  placeholder={t("email")}
-                />
-              </div>
-              <div className="w-full mt-3 min-w-[31rem] ">
-                <label className="block mb-2" htmlFor="">
-                  {t("address")}
-                </label>
-                <Input
-                  className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
-                  type="text"
-                  placeholder={t("address")}
-                />
-              </div>
-              <div className="mt-5 flex items-center gap-2">
-                <p>{t("status")} : </p>
-                <Radio.Group className="flex font-yekan items-center gap-4">
-                  <div className="flex">
-                    <Radio className="radio font-yekan" value="active">
-                      {t("active")}
-                    </Radio>
-                  </div>
-                  <div className="flex">
-                    <Radio className="radio font-yekan" value="inactive">
-                      {t("deactive")}
-                    </Radio>
-                  </div>
-                </Radio.Group>
-              </div>
-              <div className="mt-5">
-                <h1 className="font-bold text-xl">{t("logo")}</h1>
+              <form>
+                <div className="w-full mt-3 min-w-[31rem] ">
+                  <label className="block mb-2" htmlFor="companyName">
+                    {t("companyName")}
+                  </label>
+                  <Input
+                    id="companyName"
+                    className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
+                    type="text"
+                    placeholder={t("companyName")}
+                  />
+                </div>
+                <div className="w-full mt-3 min-w-[31rem] ">
+                  <label className="block mb-2" htmlFor="phoneNumber">
+                    {t("phoneNumber")}
+                  </label>
+                  <Input
+                    id="phoneNumber"
+                    className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
+                    type="text"
+                    placeholder={t("phoneNumber")}
+                  />
+                </div>
+                <div className="w-full mt-3 min-w-[31rem] ">
+                  <label className="block mb-2" htmlFor="email">
+                    {t("email")}
+                  </label>
+                  <Input
+                    id="email"
+                    className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
+                    type="text"
+                    placeholder={t("email")}
+                  />
+                </div>
+                <div className="w-full mt-3 min-w-[31rem] ">
+                  <label className="block mb-2" htmlFor="address">
+                    {t("address")}
+                  </label>
+                  <Input
+                    id="address"
+                    className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
+                    type="text"
+                    placeholder={t("address")}
+                  />
+                </div>
+                <div className="mt-5 flex items-center gap-2">
+                  <p>{t("status")} : </p>
+                  <Radio.Group className="flex font-yekan items-center gap-4">
+                    <div className="flex">
+                      <Radio className="radio font-yekan" value="active">
+                        {t("active")}
+                      </Radio>
+                    </div>
+                    <div className="flex">
+                      <Radio className="radio font-yekan" value="inactive">
+                        {t("deactive")}
+                      </Radio>
+                    </div>
+                  </Radio.Group>
+                </div>
+                <div className="mt-5">
+                  <h1 className="font-bold text-xl">{t("logo")}</h1>
 
-                <div className="mt-3 border-gray-300 p-4 rounded-3xl border">
-                  <div className="flex items-center gap-4">
-                    <Upload
-                      ref={ref}
-                      className="mt-3"
-                      name="photo"
-                      listType="picture"
-                      showUploadList={false}
-                      action="/upload"
-                      onChange={(e) => {
-                        if (ref.current) {
-                          console.log(e.file.status);
-                        }
-                      }}
-                    >
-                      <div className="outline-dashed outline-[2px] p-6 rounded-xl outline-gray-200">
-                        <svg
-                          width="54"
-                          height="54"
-                          viewBox="0 0 54 54"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M13.5015 27H40.5015"
-                            stroke="#767676"
-                            stroke-width="1.88358"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                          <path
-                            d="M27.0015 40.5V13.5"
-                            stroke="#767676"
-                            stroke-width="1.88358"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
-                    </Upload>
-                    <div>
-                      <p className="text-sm">
-                        Supports .png and .jpg. Max size 2M.
-                      </p>
+                  <div className="mt-3 border-gray-300 p-4 rounded-3xl border">
+                    <div className="flex items-center gap-4">
                       <Upload
+                        ref={ref}
                         className="mt-3"
                         name="photo"
                         listType="picture"
                         showUploadList={false}
                         action="/upload"
+                        onChange={(e) => {
+                          if (ref.current) {
+                            console.log(e.file.status);
+                          }
+                        }}
                       >
-                        <Button className="rounded-full font-yekan mt-3 text-orange-400 border-orange-400">
-                          {t("uploadPhoto")}
-                        </Button>
+                        <div className="outline-dashed outline-[2px] p-6 rounded-xl outline-gray-200">
+                          <svg
+                            width="54"
+                            height="54"
+                            viewBox="0 0 54 54"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13.5015 27H40.5015"
+                              stroke="#767676"
+                              stroke-width="1.88358"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M27.0015 40.5V13.5"
+                              stroke="#767676"
+                              stroke-width="1.88358"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
                       </Upload>
+                      <div>
+                        <p className="text-sm">
+                          Supports .png and .jpg. Max size 2M.
+                        </p>
+                        <Upload
+                          className="mt-3"
+                          name="photo"
+                          listType="picture"
+                          showUploadList={false}
+                          action="/upload"
+                        >
+                          <Button className="rounded-full font-yekan mt-3 text-orange-400 border-orange-400">
+                            {t("uploadPhoto")}
+                          </Button>
+                        </Upload>
+                      </div>
                     </div>
                   </div>
+                  <div dir="ltr">
+                    <Button className="mt-4 bg-green-500 border-0 text-white rounded-2xl font-yekan px-6  ">
+                      {t("save")}
+                    </Button>
+                  </div>
                 </div>
-                <div dir="ltr">
-                  <Button className="mt-4 bg-green-500 border-0 text-white rounded-2xl font-yekan px-6  ">
-                    {t("save")}
-                  </Button>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
           <div className="bg-white mt-3 min-h-[44rem] dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl p-5">

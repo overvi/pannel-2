@@ -36,20 +36,22 @@ const Hotels = () => {
           <Slider className="custom-slider" range defaultValue={[20, 50]} />
           <div className="mt-3 flex items-center gap-3">
             <div className="w-full mt-3 ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="least">
                 {t("least")}
               </label>
               <Input
+                id="least"
                 className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                 type="text"
               />
             </div>
             <p className="self-end mb-3">-</p>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="most">
                 {t("most")}
               </label>
               <Input
+                id="most"
                 className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                 type="text"
               />
@@ -67,20 +69,22 @@ const Hotels = () => {
           <Slider range defaultValue={[20, 50]} />
           <div className="mt-3 flex items-center gap-3">
             <div className="w-full mt-3 ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="leastA">
                 {t("least")}
               </label>
               <Input
+                id="leastA"
                 className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                 type="text"
               />
             </div>
             <p className="self-end mb-3">-</p>
             <div className="w-full mt-3  ">
-              <label className="block mb-2" htmlFor="">
+              <label className="block mb-2" htmlFor="mostA">
                 {t("most")}
               </label>
               <Input
+                id="mostA"
                 className="rounded-full p-2 placeholder:font-yekan focus:border-orange-500 focus:shadow-none hover:border-orange-500 "
                 type="text"
               />
