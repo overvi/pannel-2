@@ -186,6 +186,7 @@
   "acceptUserDetails": "تایید اطلاعات رزرو کننده",
   "acceptGuestDetails": "تایید اطلاعات مهمانان",
   "messageRequest": " پیام / درخواست",
+  "messageCenter": "مرکز اعلانات",
   "next": "بعدی",
   "prev": "بازگشت",
   "balanceError": "اعتبار حساب کافی نیست!",
@@ -218,5 +219,6 @@
   "action": "عملیات",
   "showFiveInPage": "نمایش پنج در صفحه",
   "connectionBase": "واحد ارتباطی",
-  "operator": "اپراتور"
+  "operator": "اپراتور",
+  "saved": " ذخیره شد"
 }

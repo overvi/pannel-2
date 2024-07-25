@@ -182,6 +182,7 @@
   "acceptUserDetails": "Confirm Reservation Details",
   "acceptGuestDetails": "Confirm Guest Details",
   "messageRequest": "Message / Request",
+  "messageCenter": "Message Center",
   "next": "Next",
   "prev": "Back",
   "balanceError": "Insufficient Account Balance!",
@@ -214,5 +215,6 @@
   "showFiveInPage": "Show Five In Page",
   "action": "Action",
   "connectionBase": "Connection Base",
-  "operator": "Operator"
+  "operator": "Operator",
+  "saved": "Saved"
 }

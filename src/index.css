@@ -199,3 +199,12 @@
   .ant-steps-item-title::after {
   background-color: orange;
 }
+
+.travelers-table table {
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.travelers-table .ant-table-container {
+  border-radius: 30px;
+}

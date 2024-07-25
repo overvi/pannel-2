@@ -52,13 +52,12 @@ export const Accept = () => {
   return (
     <>
       <div className="!mt-14 ">
-        <h1 className="text-xl mb-4">{t("guestDetails")}</h1>
         <div className="space-y-10">
           <div>
             <div className="bg-gray-50 p-4 dark:bg-gray-950 rounded-t-2xl">
               <h1 className=" text-xl">{t("acceptUserDetails")}</h1>
             </div>
-            <div className="flex border dark:border-gray-700 gap-4 rounded-b-2xl p-4 h-full ">
+            <div className="flex border dark:border-gray-700 gap-4 rounded-b-[8px] p-4 h-full ">
               <div
                 className={`basis-[30%] ${
                   en ? "border-r" : "border-l"
@@ -95,7 +94,11 @@ export const Accept = () => {
           </div>
           <div>
             <label className="mb-2 block">{t("messageRequest")}</label>
-            <TextArea rows={4} placeholder={t("messageRequest")} />
+            <TextArea
+              className="rounded-[8px]"
+              rows={4}
+              placeholder={t("messageRequest")}
+            />
           </div>
         </div>
       </div>

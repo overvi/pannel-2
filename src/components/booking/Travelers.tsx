@@ -7,6 +7,7 @@ const { Option } = Select;
 export const Travelers = () => {
   const { t } = useTranslation();
 
+  const [added, setAdded] = useState(false);
   const data = [
     { key: t("suename"), value: "fdsadfa22443" },
     { key: t("email"), value: "alireza@gmail.com" },
@@ -59,11 +60,6 @@ export const Travelers = () => {
       dataIndex: "guest",
       key: "guest",
     },
-    {
-      title: "fdsa",
-      dataIndex: "action",
-      key: "action",
-    },
   ];
   const guestsColumn = [
     {
@@ -92,27 +88,35 @@ export const Travelers = () => {
       key: "adultChild",
       render: () => {
         return (
-          <Radio.Group className="flex  font-yekan  gap-4">
-            <div className="flex items-center ">
-              <Radio className="radio font-yekan" value="oneStar">
-                {t("adult")}
-              </Radio>
+          <>
+            <div className="flex items-end gap-5">
+              <Radio.Group className="flex mb-2  font-yekan  gap-4">
+                <div className="flex items-center ">
+                  <Radio className="radio font-yekan" value="oneStar">
+                    {t("adult")}
+                  </Radio>
+                </div>
+                <div className="flex items-center ">
+                  <Radio className="radio font-yekan" value="twoStar">
+                    {t("child")}
+                  </Radio>
+                </div>
+              </Radio.Group>
+              <div>
+                <label className="block" htmlFor="age">
+                  {t("age")}
+                </label>
+                <Select
+                  id="age"
+                  className="ant-select"
+                  defaultValue="2"
+                  style={{ width: 100 }}
+                >
+                  <Option>1</Option>
+                </Select>
+              </div>
             </div>
-            <div className="flex items-center ">
-              <Radio className="radio font-yekan" value="twoStar">
-                {t("child")}
-              </Radio>
-            </div>
-            <div>
-              <Select
-                className="ant-select"
-                defaultValue="2"
-                style={{ width: 100 }}
-              >
-                <Option>1</Option>
-              </Select>
-            </div>
-          </Radio.Group>
+          </>
         );
       },
     },
@@ -122,12 +126,37 @@ export const Travelers = () => {
       key: "action",
       render: () => {
         return (
-          <Button className="bg-orange-400 self-end border-0 rounded-full text-white">
-            {t("add")}
+          <Button
+            onClick={() => setAdded(true)}
+            className={`${
+              added ? "bg-[#2FAC66]" : "bg-orange-400"
+            } self-end border-0 rounded-full text-white`}
+          >
+            <svg
+              className={!added ? "hidden" : "block"}
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.4"
+                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                fill="white"
+              />
+              <path
+                d="M10.5804 15.5801C10.3804 15.5801 10.1904 15.5001 10.0504 15.3601L7.22043 12.5301C6.93043 12.2401 6.93043 11.7601 7.22043 11.4701C7.51043 11.1801 7.99043 11.1801 8.28043 11.4701L10.5804 13.7701L15.7204 8.6301C16.0104 8.3401 16.4904 8.3401 16.7804 8.6301C17.0704 8.9201 17.0704 9.4001 16.7804 9.6901L11.1104 15.3601C10.9704 15.5001 10.7804 15.5801 10.5804 15.5801Z"
+                fill="white"
+              />
+            </svg>
+
+            {t(added ? "saved" : "add")}
             <svg
               width="24"
               height="24"
               viewBox="0 0 24 24"
+              className={added ? "hidden" : "block"}
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -297,7 +326,7 @@ export const Travelers = () => {
           <div>
             <Table
               pagination={false}
-              className="w-full mt-4 message-table "
+              className="w-full mt-4 message-table  "
               dataSource={preGuests}
               columns={preGuestsColumn}
             />
@@ -323,9 +352,10 @@ export const Travelers = () => {
         <h1 className="text-xl">{t("hotelDetails")}</h1>
         <Table
           pagination={false}
-          className="w-full mt-4 message-table "
+          className="w-full mt-4 message-table travelers-table"
           dataSource={dataSource}
           columns={detailsColumn}
+          bordered
         />
       </div>
       <div className="!mt-14 ">
@@ -333,7 +363,7 @@ export const Travelers = () => {
           <h1 className="text-xl mb-4">{t("guestDetails")}</h1>
           <Button
             onClick={() => setIsModalOpen(true)}
-            className="rounded-full bg-green-400 border-0 text-white"
+            className="rounded-full bg-[#2FAC66] border-0 text-white"
           >
             <svg
               width="24"
@@ -357,7 +387,7 @@ export const Travelers = () => {
         </div>
         <Table
           pagination={false}
-          className="w-full message-table "
+          className="w-full message-table travelers-table "
           dataSource={guestsData}
           columns={guestsColumn}
           bordered

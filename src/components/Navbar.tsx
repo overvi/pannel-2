@@ -10,6 +10,7 @@ import logo from "../assets/Logo Orange 1.svg";
 import language from "../assets/language-circle.svg";
 import search from "../assets/search-normal.svg";
 import { useTheme } from "./ToggleColorMode";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { darkMode, setDarkMode } = useTheme();
@@ -265,9 +266,40 @@ const NotificationPopover = () => {
       content={
         <div dir="rtl" className="font-yekan w-[25rem] p-2 pb-20 rounded-full ">
           <div>
-            <h1 className="font-bold text-lg border-b  pb-3">
-              {t("database")}
-            </h1>
+            <div className="flex justify-between border-b ">
+              <h1 className="font-bold text-lg  pb-3">{t("messageCenter")}</h1>
+              <div>
+                <Link
+                  to={"#"}
+                  className="flex items-center text-slate-400 gap-2"
+                >
+                  {" "}
+                  مشاهده بیشتر
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5.58234 3.45923L2.0415 7.00006L5.58234 10.5409"
+                      stroke="#767676"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M11.9581 7H2.14062"
+                      stroke="#767676"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
             <div className="mt-2 flex justify-between items-center  py-3 border-b ">
               <div>
                 <h2 className="font-bold text-orange-500">
@@ -332,21 +364,51 @@ const ProfilePopover = () => {
     <Popover
       rootClassName="nav-popover"
       content={
-        <div dir="rtl" className="font-yekan w-[20rem] rounded-full ">
+        <div dir="rtl" className="font-yekan w-[24rem] rounded-full ">
           <div dir="rtl" className="border-b pb-3 p-2">
             <h1 className="font-bold text-lg">{t("accountDetails")} </h1>
             <p>gxgrsadas8344</p>
           </div>
-          <div dir="rtl" className="border-b py-3">
-            <h1 className="font-bold text-lg"> {t("balance")}</h1>
-            <p>1200.USD</p>
+          <div dir="rtl" className="border-b py-3 flex justify-between ">
+            <div>
+              <h1 className="font-bold text-lg"> {t("balance")}</h1>
+              <p>1200.USD</p>
+            </div>
+            <div>
+              <Link to={"#"} className="flex items-center text-slate-400 gap-2">
+                {" "}
+                مشاهده بیشتر
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.58234 3.45923L2.0415 7.00006L5.58234 10.5409"
+                    stroke="#767676"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.9581 7H2.14062"
+                    stroke="#767676"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </Link>
+            </div>
           </div>
           <div dir="rtl" className="py-3">
             <h1 className="font-bold text-lg"> {t("customerInfo")}</h1>
             <p>Hjys</p>
           </div>
           <div
-            className="mt-3 flex items-center justify-center gap-7"
+            className="mt-3 flex items-center justify-between mx-5 gap-7"
             dir="rtl"
           >
             <button className="flex flex-col justify-center items-center">
@@ -371,7 +433,10 @@ const ProfilePopover = () => {
               </div>
               <p className="text-center"> {t("exit")} </p>
             </button>
-            <button className="flex flex-col justify-center items-center">
+            <Link
+              to={"/account"}
+              className="flex flex-col justify-center items-center"
+            >
               <div className="rounded-full w-fit p-2 bg-gray-50 dark:bg-gray-900">
                 <svg
                   width="32"
@@ -392,8 +457,11 @@ const ProfilePopover = () => {
                 </svg>
               </div>
               <p className="text-center"> {t("users")}</p>
-            </button>
-            <button className="flex flex-col justify-center items-center">
+            </Link>
+            <Link
+              to={"/logs"}
+              className="flex flex-col justify-center items-center"
+            >
               <div className="rounded-full w-fit p-2 bg-gray-50 dark:bg-gray-900">
                 <svg
                   width="32"
@@ -433,8 +501,8 @@ const ProfilePopover = () => {
                 </svg>
               </div>
               <p className="text-center">{t("management")} </p>
-            </button>
-            <button>
+            </Link>
+            <Link to={"/datacenter"}>
               <div className="rounded-full p-2 bg-gray-50 dark:bg-gray-900">
                 <svg
                   width="32"
@@ -455,7 +523,7 @@ const ProfilePopover = () => {
                 </svg>
               </div>
               {t("database")}
-            </button>
+            </Link>
           </div>
         </div>
       }

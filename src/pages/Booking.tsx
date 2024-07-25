@@ -64,7 +64,7 @@ const Booking = () => {
           </p>
         </div>
         <div className="bg-white mx-3 space-y-8 dark:bg-gray-900 dark:text-white mt-3 rounded-3xl p-5">
-          <div className="bg-white flex gap-3 items-center *:basis-full dark:bg-gray-950 dark:text-white mt-3 rounded-3xl p-5 dark:shadow-none  shadow-[0px_0px_21px_5px_rgba(0,0,0,0.10)]">
+          <div className="bg-white flex gap-3 items-center *:basis-full dark:bg-gray-950 dark:text-white mt-3 rounded-3xl p-5 dark:shadow-none  shadow-[0px_0px_10px_1px_rgba(0,0,0,0.10)]">
             {infoCards.map((card) => (
               <div className="flex items-center gap-3 border border-orange-300 p-3 rounded-2xl">
                 <p className="rtl:border-l ltr:border-r ltr:pr-2 ltr:border-r-orange-300 pl-2 border-l-orange-300">
@@ -155,7 +155,7 @@ const Booking = () => {
           <div>{current == 2 && <Accept />}</div>
           <div>{<ResultComponent />}</div>
         </div>
-        <div className="rounded-2xl mx-3 flex justify-between mb-3 p-3 text-sm mt-2 bg-white dark:bg-gray-950">
+        <div className="rounded-3xl mx-3 flex justify-between mb-3 p-3 text-sm mt-2 bg-white dark:bg-gray-950">
           <Button
             disabled={current == 1}
             className=" border-0 rounded-full font-bold"
@@ -183,7 +183,7 @@ const Booking = () => {
           </Button>
           <Button
             disabled={current == 3}
-            className="bg-green-400 group text-white border-0 rounded-full font-bold"
+            className="bg-[#2FAC66] group text-white border-0 rounded-full font-bold"
             onClick={() => setCurrent(current + 1)}
           >
             {t("next")}

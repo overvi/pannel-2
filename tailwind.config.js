@@ -14,6 +14,9 @@ export default {
           900: "#181818",
           700: "#303030",
         },
+        orange: {
+          400: "#f9b233",
+        },
       },
     },
     fontFamily: {

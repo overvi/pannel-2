@@ -32,7 +32,7 @@ const ChildsModal = () => {
       <button
         onClick={showModal}
         type="button"
-        className="bg-orange-400 gap-3 flex p-2 px-3 rounded-full text-white"
+        className="bg-[#f9b233] gap-3 flex p-2 px-3 rounded-full text-white"
       >
         <svg
           width="24"
@@ -70,7 +70,7 @@ const ChildsModal = () => {
           <p>{t("eachChildAge")}</p>
           <div className="flex items-center gap-4 mt-4">
             {ChildModalItems.map((child) => (
-              <div>
+              <div key={child.id}>
                 <label htmlFor="my-select" className="block ">
                   {child.label}
                 </label>
@@ -80,7 +80,9 @@ const ChildsModal = () => {
                   style={{ width: 100 }}
                 >
                   {child.options.map((op) => (
-                    <Option value={op.value}>{op.label}</Option>
+                    <Option key={op.value} value={op.value}>
+                      {op.label}
+                    </Option>
                   ))}
                 </Select>
               </div>

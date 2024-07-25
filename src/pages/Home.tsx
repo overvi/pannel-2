@@ -8,6 +8,7 @@ import ChildsModal from "../components/home/ChildsModal";
 import DatePickers from "../components/home/DatePicker";
 import DateSegment from "../components/home/DateSegment";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const { Option } = Select;
 
@@ -44,7 +45,7 @@ const HomeEn = () => {
 
           <p>{t("nav")}</p>
         </div>
-        <div className={`grid grid-cols-3 ${en ? "me-9" : "ml-9"} mt-4 gap-9`}>
+        <div className={`grid grid-cols-3 ${en ? "me-9" : "ml-9"} mt-4 gap-6`}>
           <div className=" col-span-2">
             <div className="bg-white dark:bg-gray-900  dark:text-white dark:border-gray-500 rounded-3xl p-5">
               <div className="flex justify-between items-center">
@@ -115,7 +116,10 @@ const HomeEn = () => {
                       <ChildsModal />
                     </div>
                   </div>
-                  <button className="p-2  mt-6 flex items-center gap-2 text-white bg-green-600 rounded-full">
+                  <Link
+                    to={"/hotels"}
+                    className="p-2  mt-6 flex items-center gap-2 text-white bg-green-600 rounded-full"
+                  >
                     <svg
                       width="24"
                       height="24"
@@ -134,7 +138,7 @@ const HomeEn = () => {
                       />
                     </svg>
                     <p>{t("search")}</p>
-                  </button>
+                  </Link>
                 </div>
               </form>
             </div>
